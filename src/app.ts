@@ -1,19 +1,9 @@
 import { ApolloServer } from '@apollo/server';
+import 'dotenv/config';
 import { startStandaloneServer } from '@apollo/server/standalone';
-
-// The GraphQL schema
-const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
-`;
-
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    hello: () => 'world',
-  },
-};
+import { typeDefs } from './schemas';
+import { resolvers } from './resolvers';
+require('dotenv').config();
 
 const server = new ApolloServer({
   typeDefs,
