@@ -7,5 +7,6 @@ export const categoriesTrainingStyleTypeDefs = `#graphql
 
     type Query {
         getAllCategoriesTrainingStyle: [CategoriesTrainingStyle]
+        getCategoriesTrainingStyleById(id: String!): CategoriesTrainingStyle
     }
 `;

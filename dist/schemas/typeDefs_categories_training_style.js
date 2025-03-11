@@ -10,5 +10,6 @@ exports.categoriesTrainingStyleTypeDefs = `#graphql
 
     type Query {
         getAllCategoriesTrainingStyle: [CategoriesTrainingStyle]
+        getCategoriesTrainingStyleById(id: String!): CategoriesTrainingStyle
     }
 `;

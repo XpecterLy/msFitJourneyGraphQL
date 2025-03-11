@@ -19,10 +19,18 @@ exports.msCategoriesMuscleGroup = msCategoriesMuscleGroup;
 _a = msCategoriesMuscleGroup;
 msCategoriesMuscleGroup.getAllCategoriesMuscleGroup = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("host_ms_categories:");
-        console.log(ms_categories_config_1.host_ms_categories);
         const { data } = yield ms_categories_config_1.msCategoriesConfig.get('/categories_muscle_group/all');
-        console.log(data);
+        return data;
+    }
+    catch (error) {
+        if ((0, axios_1.isAxiosError)(error))
+            console.log(error.response);
+        console.log(error);
+    }
+});
+msCategoriesMuscleGroup.getCategorieMuscleGroupById = (id) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { data } = yield ms_categories_config_1.msCategoriesConfig.get(`/categories_muscle_group?id=${id}`);
         return data;
     }
     catch (error) {

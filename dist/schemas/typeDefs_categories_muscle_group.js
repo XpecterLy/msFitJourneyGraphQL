@@ -10,5 +10,6 @@ exports.categoriesMuscleGroupTypeDefs = `#graphql
 
     type Query {
         getAllCategoriesMuscleGroup: [CategoriesMuscleGroup]
+        getCategoriesMuscleGroupById(id: String!): CategoriesMuscleGroup
     }
 `;
